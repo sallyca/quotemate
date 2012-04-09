@@ -1,0 +1,11 @@
+%meta{:charset => Quotemate::Application.config.encoding}
+%meta{:'http-equiv' => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
+%link{:rel => "shortcut icon", :href => "/favicon.ico"}
+%link{:rel => "apple-touch-icon", :href => "/apple-touch-icon.png"}
+%link{:rel => "alternate",  :type => "application/rss+xml", :title => "RSS", :href => "/posts.rss"}
+-# = auto_discovery_link_tag :rss, news_items_url(:format => 'rss')
+= csrf_meta_tag
+= yield :meta
+= stylesheet_link_tag 'application'
+= yield :css
+= javascript_include_tag 'modernizr'

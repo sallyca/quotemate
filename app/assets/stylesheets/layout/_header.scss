@@ -1,0 +1,31 @@
+#header {
+  position: relative;
+  padding: 15px 0;
+  
+  #main_menu {
+    margin: 10px 0;
+    .item {
+      @include inline-block;
+      @include title-font;
+      font-size:20px;
+      vertical-align: bottom;
+      margin-right: 1em;
+
+      a {
+        text-decoration: underline;
+        &:hover {
+          color: $link-color;
+          text-decoration: underline;
+        }
+      }
+
+      &.current a {
+        text-decoration: underline;
+      }
+
+      &.small {
+        font-size:14px;
+      }
+    }
+  }
+}

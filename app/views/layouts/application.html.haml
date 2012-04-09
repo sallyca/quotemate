@@ -1,0 +1,12 @@
+!!!
+= render "/shared/html_tag"
+%head= render "/shared/head"
+%body{:class => %|c-#{controller.controller_name} a-#{controller.action_name}|}
+  #wrap
+    #header= render "/shared/header"
+    #page
+      #main= yield
+  #footer= render "/shared/footer"
+  = render "/shared/javascripts"
+:plain
+  </html>

@@ -1,0 +1,31 @@
+$global-width: 1000px;
+$footer-height: 190px;
+$main-text-color: #231f20;
+$main-text-color-hover: #4A4542;
+$border-color: #d2d2d2;
+$link-color: #004c98;
+$link-hover-color: #06e;
+$main-fonts: "Verdana";
+$title-fonts: "Arial";
+$highlight-color: #004c98;
+$selection-color: false;
+
+.center {
+  text-align:center;
+}
+
+.left {
+  text-align:left;
+}
+
+.right {
+  text-align:right;
+}
+
+.f-left {
+  float:left;
+}
+
+.f-right {
+  float:right;
+}

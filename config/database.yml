@@ -17,9 +17,3 @@ test:
   password:
   adapter: mysql2
   database: quotemate_sally
-
-production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000

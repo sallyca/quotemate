@@ -4,4 +4,8 @@
   width: $global-width;
   margin-top: -$footer-height;
   overflow: hidden;
+  .links {
+    float: right;
+  }
+  
 }

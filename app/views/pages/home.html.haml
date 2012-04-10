@@ -23,8 +23,11 @@
   = "Цитаты из фильмов"
 - Quote.from_movies.each do |quote|
   = render "/pages/quotes/section", :quote => quote
+.clearfix
     
 %h3.title
   = "Цитаты из художественных книг"
 - Quote.from_books.each do |quote|
   = render "/pages/quotes/section", :quote => quote
+.clearfix
+

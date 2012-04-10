@@ -33,8 +33,46 @@ body {
 
     #main {
       float:left;
-      width: 720px;
+      width: 960px;
       margin-bottom: 20px;
+      
+      .board {
+        background-color: #e6e6e6;
+        padding: 20px;
+        
+        .tagline {
+          margin-top: 20px;
+          margin-bottom: 30px;
+        }
+        
+        .links {
+          text-align: center;
+          float: left;
+          
+          .item {
+            @include inline-block;
+            text-align: left;
+            vertical-align: top;
+            align: center;
+            width: 275px;
+            margin: 0 5px 1em 5px;
+
+            .title {
+              font-size: 22px;
+              text-align: left;   
+              text-decoration: underline;
+              margin-bottom: 8px;  
+            }
+
+            .photo {
+              height: 135px;
+              width: 225px;
+              text-align: left;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
       
       &.full {
         width: 100%;

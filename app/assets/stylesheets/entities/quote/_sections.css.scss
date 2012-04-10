@@ -1,0 +1,158 @@
+section.quote {
+  margin-bottom: 20px;
+  float: left;
+
+  h2 {
+    margin-bottom: 0.5em;
+  }
+
+  .title {
+    @include title-font;
+    font-size: 18px;
+    line-height: 125%;
+    font-weight: normal;
+
+    a, a:visited {
+      color: $main-text-color;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $link-hover-color;
+    }
+  }
+
+  .photo {
+    margin-bottom: 0.5em;
+    text-align:center;
+  }
+
+  .content {
+    margin-bottom:0.5em;
+    font-size: 12px;
+  }
+
+  .tags-bar {
+    margin: 0.5em 0;
+    font-size:10px;
+    line-height:16px;
+  }
+
+  .title {
+    @include title-font;
+  }
+
+  &.section {
+    text-align: center;
+
+    .item {
+      @include inline-block;
+      text-align: left;
+      vertical-align: top;
+      align: center;
+      width: 225px;
+      margin: 0 5px 1em 5px;
+
+      .title {
+        min-height: 2.5em;        
+      }
+
+      .photo {
+        height: 135px;
+        width: 225px;
+        text-align: left;
+      }
+    }
+  }
+
+  &.events {
+    text-align: center;
+
+    .item {
+      text-align: left;
+      margin-bottom: 1em;
+
+      .info {
+        margin-bottom: 1em;
+
+        .field {
+
+          .item {
+            font-weight: bold;
+          }
+
+          .value {
+            color: #7d7d7d;
+          }
+
+          &.date_at .value {
+            font-weight: bold;
+            color: #00499c;
+          }
+        }
+      }
+
+      .tags {
+        margin-top: 1em;
+      }
+
+      .right-side {
+        @include inline-block;
+        vertical-align: top;
+      }
+
+      .photo {
+        @include inline-block;
+        text-align: center;
+        margin-right: 10px;
+        vertical-align: top;
+      }
+
+
+      &.large {
+
+        .right-side {
+          width: 360px;
+        }
+
+        .field {
+          font-size: 14px;
+        }
+      }
+
+      &.medium {
+        @include inline-block;
+        width: 345px;
+        margin: 5px;
+        vertical-align: top;
+
+        .title {
+          font-size: 15px;
+        }
+
+        .right-side {
+          width: 180px;
+        }
+      }
+    }
+  }
+
+  &.people {
+    .item {
+      float:left;
+      width:23%;
+      margin: 0em 1% 1em 1%;
+
+      .title {
+        text-align:center;
+        height:2em;
+      }
+
+      .photo {
+        img {
+          border:1px solid #cfd1d0;
+        }
+      }
+    }
+  }
+}

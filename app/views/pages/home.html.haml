@@ -1,1 +1,30 @@
-= "Aloha"
+.board
+  .tagline
+    = "Quotemate — это весёлый и захватывающий способ сохранять понравившиеся цитаты любимых авторов, а также персонажей книг, фильмов и сериалов."
+  .links
+    .item
+      .photo
+        = link_to image_tag("stub-small.png"), "#"
+      .title= link_to "Сохраняй"
+      = "понравившиеся цитаты, теперь ничего не потеряется."
+    .item
+      .photo
+        = link_to image_tag("stub-small.png"), "#"
+      .title= link_to "Делись"
+      = "своими находками с другими любителями цитат."
+    .item
+      .photo
+        = link_to image_tag("stub-small.png"), "#"
+      .title= link_to "Исследуй"
+      = "интересные выссказывания и находи людей с похожими вкусами."
+  .clearfix
+
+%h3.title
+  = "Цитаты из фильмов"
+- Quote.from_movies.each do |quote|
+  = render "/pages/quotes/section", :quote => quote
+    
+%h3.title
+  = "Цитаты из художественных книг"
+- Quote.from_books.each do |quote|
+  = render "/pages/quotes/section", :quote => quote

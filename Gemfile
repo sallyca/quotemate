@@ -18,6 +18,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'pg'
 
 group :development, :production do
   gem 'mysql2', "~> 0.3.11"

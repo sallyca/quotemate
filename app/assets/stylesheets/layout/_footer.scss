@@ -1,0 +1,7 @@
+#footer {
+  @include centered;
+  height: $footer-height;
+  width: $global-width;
+  margin-top: -$footer-height;
+  overflow: hidden;
+}

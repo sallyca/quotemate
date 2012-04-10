@@ -1,0 +1,12 @@
+%section.quote.section
+  - if source.type == 'movie'
+    - quote.descendants.on_home_page.each do |quote|
+      .item
+        .photo= link_to image_fu(b.image, "225x135>", :alt => b.title), url_for_blog(b)
+        .content= truncate(quote.text, :length => 100, :separator => ' ')
+      .clearfix
+  - elsif quote.source.type == 'book'
+    - quote.posts_for_section.each do |post|
+    .item
+      .content= truncate(post.teaser, :length => 100, :separator => ' ')
+       %h2.book= link_to quote.book.title, "#"

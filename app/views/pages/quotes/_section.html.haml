@@ -2,8 +2,8 @@
   - if quote.category.title == 'movie'
     .item
       .photo= link_to image_fu(b.image, "225x135>", :alt => quote.title), "#"
-      .content= truncate(quote.text, :length => 100, :separator => ' ')
+      .content= truncate(quote.text, :length => 150, :separator => ' ')
   - elsif quote.category.title == 'book'
     .item
-      .content= truncate(quote.text, :length => 100, :separator => ' ')
+      .content= truncate(quote.text, :length => 150, :separator => ' ')
       .book= link_to quote.source, "#"

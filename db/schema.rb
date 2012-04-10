@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(:version => 20120409183343) do
 
   create_table "quotes", :force => true do |t|
     t.integer  "source_id"
-    t.string   "text"
+    t.text     "text"
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"

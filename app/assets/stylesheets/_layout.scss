@@ -37,8 +37,11 @@ body {
       margin-bottom: 20px;
       
       .board {
+        @import "layout/devise";
+        
         background-color: #e6e6e6;
         padding: 20px;
+        @include border-radius(5px);
         
         .tagline {
           margin-top: 20px;

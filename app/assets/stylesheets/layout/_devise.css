@@ -1,0 +1,41 @@
+.login-form {
+  @include centered;
+  width: 250px;
+  
+  .left {
+    padding-right: 20px;
+    padding-left:20px;
+    float: left;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  
+  .btn-info {
+    @include border-radius(5px);
+    width: 130px;
+    background-color: #49afcd;
+    background-image: -moz-linear-gradient(top, #797373, #353232);
+    background-image: -ms-linear-gradient(top, #797373, #353232);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#353232));
+    background-image: -webkit-linear-gradient(top, #797373, #353232);
+    background-image: -o-linear-gradient(top, #797373, #353232);
+    background-image: linear-gradient(top, #797373, #353232);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#797373', endColorstr='#353232', GradientType=0);
+    border-color: #353232 #353232 #1f6377;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    a {
+      color: white;
+    }
+  }
+  
+  .btn-info:hover, .btn-info:active, .btn-info.active, .btn-info.disabled, .btn-info[disabled] {
+    background-color: #2f96b4;
+  }
+  
+  .btn-info:active, .btn-info.active {
+    background-color: #24748c \9;
+  }
+}
+    

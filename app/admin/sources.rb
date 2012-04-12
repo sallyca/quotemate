@@ -1,4 +1,7 @@
+#encoding: UTF-8
 ActiveAdmin.register Source do
+
+  menu :label => "Источники", :priority => 2
 
   form :partial => "form"
 

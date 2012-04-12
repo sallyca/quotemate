@@ -13,10 +13,14 @@ gem 'haml'
 gem 'sass-rails', "  ~> 3.1.0"
 gem 'coffee-rails', "~> 3.1.0"
 gem 'uglifier'
-
+gem 'dragonfly'
+gem 'rack-cache', :require => 'rack/cache'
+gem 'rack-rewrite'
+gem 'acts_as_indexed'
 
 gem 'jquery-rails'
 gem 'pg'
+gem 'awesome_nested_set'
 
 group :development, :production do
   gem 'mysql2', "~> 0.3.11"

@@ -1,0 +1,2 @@
+class Book < Source
+end

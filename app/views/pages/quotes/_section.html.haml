@@ -6,4 +6,4 @@
   - elsif quote.category.title == 'book'
     .item
       .content= truncate(quote.text, :length => 150, :separator => ' ')
-      .book= link_to quote.source, "#"
+      .book= link_to quote.source.title, quote.source if quote.source

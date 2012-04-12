@@ -1,4 +1,7 @@
 ActiveAdmin.register Source do
+
+  form :partial => "form"
+
   index do
     column :id
     column :title

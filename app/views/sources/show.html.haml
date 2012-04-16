@@ -1,0 +1,9 @@
+.img
+  = image_fu(@source.image)
+.details.title
+  = @source.title
+.details.author
+  = @source.author.name if @source.author
+
+= link_to 'Edit', edit_source_path(@source)
+

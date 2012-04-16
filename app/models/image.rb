@@ -10,8 +10,6 @@ class Image < ActiveRecord::Base
   validates_property :mime_type, :of => :image, :in => %w(image/jpeg image/png image/gif image/tiff), :message => :incorrect_format
   acts_as_indexed :fields => [:title]
 
-  attr_accessible :id, :image, :image_size, :remove_image
-
   delegate :size, :mime_type, :url, :width, :height, :to => :image
 
   after_save do |image|

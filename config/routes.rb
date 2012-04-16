@@ -1,4 +1,6 @@
 Quotemate::Application.routes.draw do
+  resources :authors
+
   devise_for :quoters
 
   resources :pages

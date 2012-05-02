@@ -1,6 +1,15 @@
 #main_menu
-  .item=link_to_unless_current "Quotemate", root_path
+  .main-item
+    #logo
+      = link_to_unless_current "Quotemate", root_path
+    #tagline
+    = "Хранилище клёвых цитат"
   .item=link_to_unless_current "Цитаты", quotes_path
   .item=link_to_unless_current "Авторы", "#"
   .item=link_to_unless_current "Произведения", sources_path
   .item=link_to_unless_current "Теги", tags_path
+  .search
+    = form_tag quotes_path, :method => 'get' do
+      = "Искать"
+      = text_field_tag :search, params[:search], :size=> 100
+      = submit_tag "Найти", :name => nil

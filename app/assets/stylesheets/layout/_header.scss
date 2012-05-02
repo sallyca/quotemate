@@ -3,12 +3,24 @@
   padding: 15px 0;
   
   #main_menu {
-    margin: 10px 0;
+    margin: 10px 0 80px;
+    .main-item{
+      margin-right: 20px;
+      @include inline-block;
+      #logo{
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
+    }
+    .search{
+      margin-left: 220px;
+      margin-top: -20px;
+    }
     .item {
       @include inline-block;
       @include title-font;
       font-size: 18px;
-      vertical-align: bottom;
+      vertical-align: top;
       margin-right: 1em;
 
       a {

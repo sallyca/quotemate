@@ -1,3 +1,6 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+jQuery ->
+  $("#quote_source_title").autocomplete
+    source: $("#quote_book_title").data('autocomplete-source')
+  $("#quote_tag_tokens").autocomplete
+    source: $("#quote_tag_tokens").data('autocomplete-source')
+  $('#source_author_ids').chosen()

@@ -20,6 +20,8 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'awesome_nested_set'
 
+gem 'chosen-rails'
+
 group :development, :production do
   gem 'mysql2', "~> 0.3.11"
   gem 'capistrano', '~> 2.6.0'

@@ -18,9 +18,10 @@ body {
   background-color: #ffffff;
 }
 
+
+@import "layout/header";
+
 #wrap{
-  
-  @import "layout/header";
   
   @include centered;
   min-height:100%;

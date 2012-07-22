@@ -3,7 +3,6 @@
 .details.title
   = @source.title
 .details.author
-  = @source.author.name if @source.author
+  = @source.authors[0].name if @source.authors[0]
 
 = link_to 'Edit', edit_source_path(@source)
-

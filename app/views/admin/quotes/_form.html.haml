@@ -1,0 +1,23 @@
+= semantic_form_for [:admin, @quote] do |f|
+  = f.inputs "General" do
+    = f.input :text
+
+  .field-hidden
+    = f.label "Источник (фильм, книга, etc  — название, например)"
+    %br
+    = f.text_field :source_title, data: {autocomplete_source: Source.order(:title).map(&:title)}
+
+  %br
+  = link_to "Ах да, теги...", "#",{:class => "notice", :id => "tag-notice"}
+  .field-hidden
+    =f.text_field :tag_tokens, data: {autocomplete_source: Tag.order(:keyword).map(&:keyword)}
+
+  -# - f.object.build_image unless f.object.image
+  -# = f.inputs "Image", :for => :image do |f_i|
+  -#   - if f_i.object.image
+  -#     %li= image_fu(f.object.image)
+  -#   = f_i.input :image, :as => :file
+
+  = f.buttons
+
+

@@ -2,10 +2,11 @@
 = render "/shared/html_tag"
 %head= render "/shared/head"
 %body{:class => %|c-#{controller.controller_name} a-#{controller.action_name}|}
+  #header= render "/shared/header"
   #wrap
-    #header= render "/shared/header"
     #page
       #main= yield
+      .clearfix
   #footer= render "/shared/footer"
   = render "/shared/javascripts"
 :plain

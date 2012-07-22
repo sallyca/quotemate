@@ -1,0 +1,6 @@
+= semantic_form_for [:admin, @quote] do |f|
+  = f.inputs "General" do
+    = f.input :text
+.field
+  = f.label :author_ids, "Authors"
+  = f.collection_select :author_ids, Author.order(:name), :id, :name, {}, {multiple: true}

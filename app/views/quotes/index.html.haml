@@ -1,7 +1,12 @@
+#quote-tabs
+  %ul
+    %li= link_to "Все цитаты", "#"
+    %li= link_to "Худ. книги", "#"
+    %li= link_to "Нехуд. книги", "#"
+    %li= link_to "Фильмы и сериалы", "#"
+
 - @quotes.each do |quote|
   .item
-    .photo.column
-      = link_to image_tag("stub-small.png"), "#"
     .quote-text.column
       = quote.text
     .actions.column

@@ -15,6 +15,7 @@
 .column {
   float: left;
 }
+
 #add-quote{
 	background: asset-data-url("blue-button.png");
 	padding-left: 90px;
@@ -23,4 +24,16 @@
 	padding-bottom:15px;
 	font-size: 16px;
 	float:right;
+}
+
+#quote-tabs  > ul{
+	list-style-type: none;
+	margin-top: 2em;
+	text-align: left;
+}
+
+#quote-tabs > ul > li{
+	display: inline;
+	border-right: 1px solid #a6a6a6;
+	padding: 10px;
 }

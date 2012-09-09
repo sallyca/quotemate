@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120513204759) do
+ActiveRecord::Schema.define(:version => 20120909194111) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -86,6 +86,15 @@ ActiveRecord::Schema.define(:version => 20120513204759) do
     t.datetime "updated_at"
   end
 
+  create_table "news_items", :force => true do |t|
+    t.string   "title"
+    t.datetime "date"
+    t.text     "content"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "pages", :force => true do |t|
     t.string   "title"
     t.string   "slug"
@@ -93,6 +102,20 @@ ActiveRecord::Schema.define(:version => 20120513204759) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "products", :force => true do |t|
+    t.integer  "category_id"
+    t.string   "title"
+    t.string   "description"
+    t.string   "info"
+    t.decimal  "price",       :precision => 10, :scale => 0
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "type_id"
   end
 
   create_table "quoters", :force => true do |t|
@@ -133,6 +156,15 @@ ActiveRecord::Schema.define(:version => 20120513204759) do
     t.datetime "updated_at"
   end
 
+  create_table "searches", :force => true do |t|
+    t.string   "tags"
+    t.string   "authors"
+    t.string   "sources"
+    t.string   "quote_texts"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "sources", :force => true do |t|
     t.string   "title"
     t.string   "type"
@@ -149,6 +181,12 @@ ActiveRecord::Schema.define(:version => 20120513204759) do
 
   create_table "tags", :force => true do |t|
     t.string   "keyword"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "types", :force => true do |t|
+    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

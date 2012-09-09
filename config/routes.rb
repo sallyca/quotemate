@@ -13,6 +13,8 @@ Quotemate::Application.routes.draw do
 
   resources :sources
 
+  resources :searches
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config

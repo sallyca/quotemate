@@ -1,10 +1,10 @@
 =link_to "Добавить цитату", new_quote_path, {:id=>"add-quote"}
 #quote-tabs
   %ul
-    %li= link_to "Все цитаты", "#"
-    %li= link_to "Худ. книги", "#"
-    %li= link_to "Нехуд. книги", "#"
-    %li= link_to "Фильмы и сериалы", "#"
+    %li= link_to "Все цитаты", "?category_id=1"
+    %li= link_to "Худ. книги", "?category_id=2"
+    %li= link_to "Нехуд. книги", "?category_id=3"
+    %li= link_to "Фильмы и сериалы", "?category_id=4"
 
 #search-tab
   =link_to "Расширенный поиск >>"

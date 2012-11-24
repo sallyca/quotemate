@@ -15,15 +15,15 @@
     #main-fields
       .field
         = f.label "Текст цитаты"
-        = f.text_area :text
+        = f.text_area :text, :rows =>10
       .field
         = f.label "Из какого произведения"
-        = f.number_field :source_id
+        = f.text_field :source_id
 
       .field
         = f.label "Автор произведения"
-        = f.number_field :category_id
-    #extra-fields
+        = f.text_field :category_id
+    .clearfix
 
     .actions
       = f.submit "Сохранить цитату", {:class=>"red-dressed"}

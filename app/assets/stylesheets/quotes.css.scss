@@ -42,6 +42,17 @@
   margin-bottom: 40px;
 }
 
+#add-quote-form{
+  .field{
+    padding: 10px 0;
+    float: right;
+    input, textarea{
+      width: 300px;
+      margin-right:300px;
+    }
+  }
+}
+
 
 #advanced-search-form{
   .search-field{
@@ -49,7 +60,7 @@
     float: right;
     input{
       width: 300px;
-      margin-right:200px;
+      margin-right:300px;
     }
   }
 

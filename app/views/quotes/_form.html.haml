@@ -1,27 +1,29 @@
--@quote||=quote
-= form_for(@quote) do |f|
-  - if @quote.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@quote.errors.count, "error")
-        = "prohibited this quote from being saved:"
+- @quote||=quote
+#add-quote-form
+  = form_for(@quote) do |f|
+    - if @quote.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@quote.errors.count, "error")
+          = "prohibited this quote from being saved:"
 
-      %ul
-      - @quote.errors.full_messages.each do |msg|
-        %li
-          = msg
+        %ul
+        - @quote.errors.full_messages.each do |msg|
+          %li
+            = msg
 
-  #main-fields
-    .field
-      = f.label :source_id
-      = f.number_field :source_id
-    .field
-      = f.label :text
-      = f.text_field :text
-    .field
-      = f.label :category_id
-      = f.number_field :category_id
-  #extra-fields
-    
-  .actions
-    = f.submit
+    #main-fields
+      .field
+        = f.label "Текст цитаты"
+        = f.text_area :text
+      .field
+        = f.label "Из какого произведения"
+        = f.number_field :source_id
+
+      .field
+        = f.label "Автор произведения"
+        = f.number_field :category_id
+    #extra-fields
+
+    .actions
+      = f.submit "Сохранить цитату", {:class=>"red-dressed"}

@@ -7,3 +7,7 @@ jQuery ->
 
   $('#advanced-search').click ->
     $('#advanced-search-form').show()
+
+  $('#add-quote').click ->
+    $('#search-tab').hide()
+    $('#add-tab').show()

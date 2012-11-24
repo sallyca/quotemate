@@ -6,6 +6,8 @@
     %li= link_to "Фильмы и сериалы", "?category_id=4"
 .clearfix
 
+#add-tab{:style =>"display:none;"}
+  =render "form",{:quote=> Quote.new}
 #search-tab
   =link_to "Расширенный поиск >>", "#", {:id => "advanced-search"}
   =render "advanced_search"

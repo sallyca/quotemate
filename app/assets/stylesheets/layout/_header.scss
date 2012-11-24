@@ -25,7 +25,7 @@
     }
   }
 
-  #bottom-nav{
+  #bottom-nav {
     @include centered;
     width: 1000px;
     .item {
@@ -52,9 +52,6 @@
     }
 
     #add-quote{
-      background: asset-data-url("blue-button.png");
-      padding: 15px 90px;
-      font-size: 16px;
       float: right;
   }
   }

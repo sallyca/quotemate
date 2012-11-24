@@ -15,3 +15,6 @@
   .item=link_to_unless_current "Авторы", "#"
   .item=link_to_unless_current "Произведения", sources_path
   .item=link_to_unless_current "Теги", tags_path
+  .clearfix
+
+  =link_to "Добавить цитату", new_quote_path, {:id=>"add-quote"}

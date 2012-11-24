@@ -1,3 +1,4 @@
+-@quote||=quote
 = form_for(@quote) do |f|
   - if @quote.errors.any?
     #error_explanation
@@ -10,14 +11,17 @@
         %li
           = msg
 
-  .field
-    = f.label :source_id
-    = f.number_field :source_id
-  .field
-    = f.label :text
-    = f.text_field :text
-  .field
-    = f.label :category_id
-    = f.number_field :category_id
+  #main-fields
+    .field
+      = f.label :source_id
+      = f.number_field :source_id
+    .field
+      = f.label :text
+      = f.text_field :text
+    .field
+      = f.label :category_id
+      = f.number_field :category_id
+  #extra-fields
+    
   .actions
     = f.submit

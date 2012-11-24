@@ -4,3 +4,6 @@ jQuery ->
   $("#quote_tag_tokens").autocomplete
     source: $("#quote_tag_tokens").data('autocomplete-source')
   $('#source_author_ids').chosen()
+
+  $('#advanced-search').click ->
+    $('#advanced-search-form').show()

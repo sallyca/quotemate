@@ -1,13 +1,15 @@
-=link_to "Добавить цитату", new_quote_path, {:id=>"add-quote"}
 #quote-tabs
   %ul
     %li= link_to "Все цитаты", "?category_id=1"
     %li= link_to "Худ. книги", "?category_id=2"
     %li= link_to "Нехуд. книги", "?category_id=3"
     %li= link_to "Фильмы и сериалы", "?category_id=4"
+.clearfix
 
 #search-tab
-  =link_to "Расширенный поиск >>"
+  =link_to "Расширенный поиск >>", "#", {:id => "advanced-search"}
+  =render "advanced_search"
+
 
 - @quotes.each do |quote|
   .item

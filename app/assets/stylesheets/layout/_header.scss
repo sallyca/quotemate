@@ -1,6 +1,6 @@
 #header {
   margin-bottom: 30px;
-  
+
   #main-menu {
     background-color: #d9d9d9;
     position: relative;
@@ -50,5 +50,12 @@
         font-size:14px;
       }
     }
+
+    #add-quote{
+      background: asset-data-url("blue-button.png");
+      padding: 15px 90px;
+      font-size: 16px;
+      float: right;
+  }
   }
 }

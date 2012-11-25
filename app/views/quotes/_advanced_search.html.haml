@@ -1,17 +1,17 @@
 #advanced-search-form{:style =>"display:none;"}
-  = form_for Search.new do |f|
+  = form_for @search, :url => quotes_path, :html => {:method => :get} do |f|
     .search-field
       = "По текстам цитат"
-      = f.text_field :quote_texts
+      = f.text_field :text_contains
     .search-field
       = "По авторам"
-      = f.text_field :authors
+      = f.text_field :text_contains
     .search-field
       = "По произведениям"
-      = f.text_field :sources
+      = f.text_field :text_contains
     .search-field
       = "По тегам"
-      = f.text_field :tags
+      = f.text_field :text_contains
     .clearfix
     = f.submit "Найти", {:id=>"search", :class => "red-dressed"}
 .clearfix

@@ -1,6 +1,7 @@
 class QuotesController < InheritedResources::Base
 
   def index
-  	@quotes = Quote.search(params[:search])
+    @search = Quote.search(params[:search])
+    @quotes = @search.all
   end
 end

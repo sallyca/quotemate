@@ -5,10 +5,10 @@
         %span.bold= "Quote"
         %span="mate"
     .search
-      = form_tag quotes_path, :method => 'get' do
+      = form_for @search, :url => quotes_path, :html => {:method => :get} do |f|
         = "Искать"
-        = text_field_tag :search, params[:search], :size=> 100
-        = submit_tag "Найти", :name => nil
+        = f.text_field :text_contains
+        = f.submit "Найти"
 #bottom-nav
   .clearfix
   .item=link_to_unless_current "Цитаты", quotes_path

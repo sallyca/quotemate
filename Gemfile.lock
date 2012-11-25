@@ -207,6 +207,7 @@ DEPENDENCIES
   dragonfly
   haml
   jquery-rails
+  meta_search
   mysql2 (~> 0.3.11)
   nokogiri
   pg

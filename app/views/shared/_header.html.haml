@@ -1,9 +1,10 @@
+- @search||=Quote.search(params[:search])
 #main-menu
   #top-nav
     .main-item
       #logo
-        %span.bold= "Quote"
-        %span="mate"
+        :plain
+          <span class="bold">Quote</span><span>mate</span>
     .search
       = form_for @search, :url => quotes_path, :html => {:method => :get} do |f|
         = "Искать"

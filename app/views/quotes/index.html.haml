@@ -11,20 +11,5 @@
 #search-tab
   =link_to "Расширенный поиск >>", "#", {:id => "advanced-search"}
   =render "advanced_search"
-
-
-- @quotes.each do |quote|
-  .item
-    .quote-text.column
-      = quote.text
-    .actions.column
-      = link_to "Сохранить себе", "#"
-      = link_to "Поделиться", "#"
-      = link_to "Пожаловаться", "#"
-    .signature
-      - quote.tags.each do |tag|
-        = link_to tag.keyword, tag
-  .clearfix      
-  %br
-  %br
-  %br
+#quotes
+  =render "quotes"

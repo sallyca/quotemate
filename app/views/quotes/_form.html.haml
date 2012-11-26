@@ -1,6 +1,6 @@
 - @quote||= quote
 #add-quote-form
-  = form_for(@quote) do |f|
+  = form_for @quote, :html => {:remote => true, :data => {:type => :script}} do |f|
     - if @quote.errors.any?
       #error_explanation
         %h2
@@ -26,4 +26,4 @@
     .clearfix
 
     .actions
-      = f.submit "Сохранить цитату", {:class=>"red-dressed"}
+      = f.submit "Сохранить цитату", {:id=>"submit-quote",:class=>"red-dressed"}

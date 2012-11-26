@@ -11,3 +11,8 @@ jQuery ->
   $('#add-quote').click ->
     $('#search-tab').hide()
     $('#add-tab').show()
+
+  $('#submit-quote').click ->
+    $('#add-tab').hide()
+    $('#search-tab').show()
+    $.getScript(this.href)

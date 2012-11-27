@@ -5,13 +5,13 @@
       = f.text_field :text_contains
     .search-field
       = "По авторам"
-      = f.text_field :text_contains
+      = f.text_field :author_name_contains
     .search-field
       = "По произведениям"
-      = f.text_field :text_contains
+      = f.text_field :source_title_contains
     .search-field
       = "По тегам"
-      = f.text_field :text_contains
+      = f.text_field :tags_keyword_contains
     .clearfix
     = f.submit "Найти", {:id=>"search", :class => "red-dressed"}
 .clearfix

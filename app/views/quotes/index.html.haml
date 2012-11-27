@@ -9,7 +9,7 @@
 #add-tab{:style =>"display:none;"}
   =render "form",{:quote=> Quote.new}
 #search-tab
-  =link_to "Расширенный поиск >>", "#", {:id => "advanced-search"}
+  =link_to "Расширенный поиск", "#", {:id => "advanced-search"}
   =render "advanced_search"
 #quotes
   =render "quotes"

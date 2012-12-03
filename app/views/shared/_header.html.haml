@@ -4,7 +4,7 @@
     .main-item
       #logo
         :plain
-          <span class="bold">Quote</span><span>mate</span>
+          <a href="/"><span class="bold">Quote</span><span>mate</span></a>
     .search
       = form_for @search, :url => quotes_path, :html => {:method => :get} do |f|
         = "Искать"
